@@ -1,0 +1,19 @@
+console.log('maiaiain');
+
+let s0 = {};
+
+/**
+ * Element 가져오는 함수입니다.
+ */
+function elm (elm){
+  let target = document.querySelectorAll(elm);
+  if(target !== undefined || target !== null){
+    return (target.length === 1)? target[0]: target;
+  } else {
+    return null;
+  }
+}
+
+
+
+s0.elm = elm;

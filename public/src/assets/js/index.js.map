@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":["$","document","ready","summernote"],"mappings":"aAAAA,EAAEC,UAAUC,MAAM,WAChBF,EAAE,eAAeG","file":"index.js","sourcesContent":["$(document).ready(function() {\r\n  $('#summernote').summernote();\r\n});"],"sourceRoot":"../src"}

@@ -1,0 +1,21 @@
+@import './../../Common/Base_list/base';
+
+.signup__box{
+  margin-top: 200px;
+  width: 450px;
+}
+.singup__title{
+  margin: 50px 0 70px;
+  font-size: 33px;
+  font-weight: bold;
+}
+.button__box{
+  margin-top: 50px;
+}
+.captcha__refresh{
+  display: inline-block;
+  cursor: pointer;
+}
+.email__verify_value_input_box{
+  display: none;
+}

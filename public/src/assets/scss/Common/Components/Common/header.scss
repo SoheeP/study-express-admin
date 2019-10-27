@@ -1,0 +1,8 @@
+@import '../../Base_list/base';
+
+.headerTop{
+  height: $fixedHeaderHeight;
+  @at-root body{
+    padding-top: $fixedHeaderHeight;
+  }
+}

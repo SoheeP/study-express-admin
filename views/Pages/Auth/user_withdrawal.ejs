@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include(`${process.cwd()}/views/Common/Base/head.ejs`, {path: 'Pages/Auth/user_withdrawal',title:"HOME "}) %>
+</head>
+
+<body>
+  <%- include(`${process.cwd()}/views/Common/Component/Common/header.ejs`) %>
+  <main class="container">
+    <div class="row">
+      <div class="col-lo-12">
+        <form action="">
+          <h1>회원 탈퇴</h1>
+          <div>
+            <div>
+              회원 탈퇴 신청 전 아래 사항을 반드시 확인 하시기 바랍니다.
+            </div>
+            <div>
+
+            </div>
+          </div>
+
+          <div>
+            <div>
+              회원님의 탈퇴 사유를 남겨주시면 더 좋은 서비스를 제공하는 SK telecom이 되겠습니다.
+            </div>
+            <div>
+
+              <div>
+                <label for=""></label>
+                <input type="checkbox"> 이용하던 상품의 서비스 부족 또는 불만.
+              </div>
+              <div>
+                <label for=""></label>
+                <input type="checkbox"> 이용하던 상품의 서비스 부족 또는 불만.
+              </div>
+              <div>
+                <label for=""></label>
+                <input type="checkbox"> 이용하던 상품의 서비스 부족 또는 불만.
+              </div>
+              <div>
+                <label for=""></label>
+                <input type="checkbox"> 이용하던 상품의 서비스 부족 또는 불만.
+              </div>
+              <div>
+                <label for=""></label>
+                <input type="checkbox"> 이용하던 상품의 서비스 부족 또는 불만.
+              </div>
+              <div>
+                <label for=""></label>
+                <input type="checkbox">기타 <input type="text">
+              </div>
+
+            </div>
+          </div>
+
+          <div>
+            <div>
+              마지막까지 안전한 회원탈퇴를 위하여 다시 한번 비밀번호를 확인합니다.
+            </div>
+            <div>
+              비밀번호 재확인 <input type="text"> <input type="submit" value="탈퇴하기">
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </main>
+  <%- include(`${process.cwd()}/views/Common/Component/Common/footer.ejs`) %>
+  <%- include(`${process.cwd()}/views/Common/Base/foot.ejs`, {path: 'Pages/Auth/user_withdrawal'}) %>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include(`${process.cwd()}/views/Common/Base/head.ejs`, {path: 'Pages/Auth/signup',title:"HOME "}) %>
+</head>
+
+<body>
+  <%- include(`${process.cwd()}/views/Common/Component/Common/header.ejs`) %>
+  <main class="container">
+    <div class="center-block signup__box ">
+      <h1 class="singup__title text-center">Sign up</h1>
+      <form id="signupForm">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-10">
+              <input type="email" name="email" class="form-control" id="email" placeholder="Email Address" autocomplete="off" value="monster2jy@gmail.com">
+            </div>
+            <div class="col-lg-2 padding-none">
+              <span type="submit" class="btn btn-primary" id="emailVerifyBtn">verify</span>    
+            </div>
+          </div>
+        </div>
+        <div class="form-group email__verify_value_input_box">
+          <input type="text" class="form-control email__verify_value_input" id="emailVerifyValue" name="emailVerifyValue" placeholder="Check your email and write the verify number">
+        </div>
+        <div class="form-group">
+          <input type="password" name="password" class="form-control" id="password" placeholder="Password" value="1234" maxlength="6" />
+        </div>
+        <div class="form-group">
+          <input type="password" name="passwordConfirm" class="form-control" id="passwordConfirm" placeholder="Re-Password" value="1234">
+        </div>
+        <div class="form-group">
+          <input type="text" name="username" class="form-control" id="username" placeholder="Name" autocomplete="off" value="박첨지">
+        </div>
+        <div class="form-group">
+          <input type="text" name="phone" class="form-control" id="phone" placeholder="Phone" autocomplete="off" value="01022223333">
+        </div>
+        <div class="form-group">
+          <div>
+              <span id="captchaData"><%- captcha.data %></span>
+              <span class="captcha__refresh" id="captchaRefreshBtn"><i class="fas fa-sync-alt"></i></span>
+          </div>
+          <input type="text" name="captcha" class="form-control" id="captchaValue" autocomplete="off">
+        </div>
+        <div class="text-center button__box">
+          <button type="submit" class="btn btn-primary">Signup</button>
+          <a href="/" class="btn btn-default">Cancel</a>
+        </div>        
+      </form>
+    </div>
+  </main>
+  <%#- include(`${process.cwd()}/views/Common/Component/Common/footer.ejs`) %>
+  <%- include(`${process.cwd()}/views/Common/Base/foot.ejs`, {path: 'Pages/Auth/signup'}) %>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include(`${process.cwd()}/views/Common/Base/head.ejs`, {path: 'Pages/Mypage/mypage',title:"mypage "}) %>
+</head>
+
+<body>
+  <%- include(`${process.cwd()}/views/Common/Component/Common/header.ejs`) %>
+  <main class="container-fluid">
+    <div class="row">
+      <div class="col-lg-2">
+        <h2 class="mypage__nav">마이페이지 메뉴</h2>
+        <%- include(`${process.cwd()}/views/Pages/Mypage/mypage_nav.ejs`) %>
+      </div>
+      <div class="col-lg-10">
+        <p class="mypage__profile_title">Profile</p>
+        <h1><%= sess.user.username %></h1>
+
+        <div class="row">
+          <div class="col-lg-4">
+              <canvas id="myChart"></canvas>
+          </div>
+          <div class="col-lg-4">
+              <canvas id="dounut"></canvas>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+              <div class="panel panel-default">
+                  <div class="panel-heading">로그인 히스토리</div>
+                  <% if(log === null){ %>
+                  <p class="text-center">로그인 데이터가 없습니다.</p>
+                  <% } else { %>
+                  <ul class="list-group">
+                    <% log.map((info)=>{ %>
+                    <li class="list-group-item"><%= info.login %></li>
+                    <% }) %>
+                  </ul>
+                  <% }%>
+                </div>
+          </div>
+          <div class="col-lg-6">
+              <div class="panel panel-default">
+                  <div class="panel-heading">로그인 히스토리</div>
+                  <% if(log === null){ %>
+                  <p class="text-center">로그인 데이터가 없습니다.</p>
+                  <% } else { %>
+                  <ul class="list-group">
+                    <% log.map((info)=>{ %>
+                    <li class="list-group-item"><%= info.login %></li>
+                    <% }) %>
+                  </ul>
+                  <% }%>
+                </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+  <%- include(`${process.cwd()}/views/Common/Component/Common/footer.ejs`) %>
+  <%- include(`${process.cwd()}/views/Common/Base/foot.ejs`, {path: 'Pages/Mypage/mypage'}) %>
+</body>
+
+</html>

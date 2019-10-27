@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include(`${process.cwd()}/views/Common/Base/head.ejs`, {path: 'Pages/Auth/login',title:"HOME "}) %>
+</head>
+
+<body>
+  <%- include(`${process.cwd()}/views/Common/Component/Common/header.ejs`) %>
+  <main class="container">
+    <div class="center-block login__box">
+      <h1 class="login__title">로그인</h1>
+      <form action="/auth/login" method="POST">
+        <div class="form-group">
+          <label for="exampleInputEmail1">이메일 주소</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="이메일을 입력하세요" value="psh950502@naver.com" name="email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">암호</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="암호" value="btob2012" name="password">
+        </div>
+        
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> 입력을 기억합니다
+          </label>
+        </div>
+        <button type="submit" class="btn btn-default">제출</button>
+      </form>
+    </div>
+  </main>
+  <%#- include(`${process.cwd()}/views/Common/Component/Common/footer.ejs`) %>
+  <%- include(`${process.cwd()}/views/Common/Base/foot.ejs`, {path: 'Pages/Auth/login'}) %>
+</body>
+
+</html>

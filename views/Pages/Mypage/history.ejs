@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include(`${process.cwd()}/views/Common/Base/head.ejs`, {path: 'Pages/Mypage/mypage',title:"history "}) %>
+</head>
+
+<body>
+  <%- include(`${process.cwd()}/views/Common/Component/Common/header.ejs`) %>
+  <main class="container-fluid">
+    <div class="row">
+      <div class="col-lg-2">
+        <h2 class="mypage__nav">마이페이지 메뉴</h2>
+        <%- include(`${process.cwd()}/views/Pages/Mypage/mypage_nav.ejs`) %>
+      </div>
+      <div class="col-lg-10">
+          Content history
+      </div>
+    </div>
+  </main>
+  <%- include(`${process.cwd()}/views/Common/Component/Common/footer.ejs`) %>
+  <%- include(`${process.cwd()}/views/Common/Base/foot.ejs`, {path: 'Pages/Mypage/mypage'}) %>
+</body>
+
+</html>

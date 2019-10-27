@@ -1,0 +1,10 @@
+// @import './Common/Base_list/base';
+@import './Common/Base_list/mixins';
+@import './Common/Base_list/variables';
+
+@include dashboardNav;
+
+
+.dashboard__nav_box{
+
+}

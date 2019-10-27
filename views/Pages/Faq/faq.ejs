@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include(`${process.cwd()}/views/Common/Base/head.ejs`, {path: 'Pages/Faq/faq',title:"HOME "}) %>
+</head>
+
+<body>
+  <%- include(`${process.cwd()}/views/Common/Component/Common/header.ejs`) %>
+  <main class="container-fluid">
+    <div class="row">
+      <div class="col-lg-2 padding-none">
+        <%- include(`${process.cwd()}/views/Common/Component/Modules/dashboard_nav.ejs`) %>
+      </div>
+      <div class="col-lg-10">
+        <div class="page-header">
+          <h1>FAQ <small>Upload</small></h1>
+        </div>
+        <form action="" id="faqUploadForm">
+          <input type="text" id="faqUploadTitle" class="form-control" placeholder="Text input">
+          <textarea class="form-control" rows="3" id="faqUploadContent"></textarea>
+          <button type="submit" class="btn btn-primary" id="faqUploadBtn">등록</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <%- include(`${process.cwd()}/views/Common/Component/Common/footer.ejs`) %>
+  <%- include(`${process.cwd()}/views/Common/Base/foot.ejs`, {path: 'Pages/Faq/faq'}) %>
+</body>
+
+</html>

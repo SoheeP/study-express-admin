@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include(`${process.cwd()}/views/Common/Base/head.ejs`, {path: '/Pages/ViewPages/about', title:"About"}) %>
+</head>
+
+<body>
+    <%- include(`${process.cwd()}/views/Common/Component/Common/header.ejs`) %>
+  <main>
+    <p><%= pageName %></p>
+    Aliqua et Lorem ut nisi velit occaecat culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore dicta tenetur iste autem quos dolorem dolores officiis error cum quo sequi iusto explicabo tempora at laborum, consequuntur incidunt voluptatem! Ut?
+  </main>
+  <%- include(`${process.cwd()}/views/Common/Component/Common/footer.ejs`) %>
+  <%- include(`${process.cwd()}/views/Common/Base/foot.ejs`, {path: '/Pages/ViewPages/about'}) %>
+</body>
+
+</html>

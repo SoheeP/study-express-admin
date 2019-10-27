@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include(`${process.cwd()}/views/Common/Base/head.ejs`, {path: 'Pages/Faq/faq',title:"HOME "}) %>
+</head>
+
+<body>
+  <%- include(`${process.cwd()}/views/Common/Component/Common/header.ejs`) %>
+  <main class="container-fluid">
+    <div class="row">
+      <div class="col-lg-2 padding-none">
+        <%- include(`${process.cwd()}/views/Common/Component/Modules/dashboard_nav.ejs`) %>
+      </div>
+      <div class="col-lg-10">
+        <div class="page-header">
+          <h1>FAQ<small>List</small></h1>
+          <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="strong"> # </th>
+                  <th class="strong"> Title </th>
+                  <th class="strong"> Admin </th>
+                </tr>
+              </thead>
+              <tbody>
+                <% faqList.map((list)=>{ %>
+                  <tr>
+                    <td><%= list.id %></td>
+                    <td><%= list.title %></td>
+                    <td><%= list.admin %></td>
+                  </tr>
+                <% }) %>
+              </tbody>
+            </table>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <%#- include(`${process.cwd()}/views/Common/Component/Common/footer.ejs`) %>
+  <%- include(`${process.cwd()}/views/Common/Base/foot.ejs`, {path: 'Pages/Faq/faq'}) %>
+</body>
+
+</html>

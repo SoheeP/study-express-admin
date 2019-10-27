@@ -1,0 +1,11 @@
+
+@import './../../Common/Base_list/mixins';
+@import './../../Common/Base_list/variables';
+
+
+@include dashboardNav;
+
+
+.faqUploadForm{
+  margin-bottom: 200px;
+}
