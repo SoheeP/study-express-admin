@@ -1,0 +1,26 @@
+@import './../../Common/Base_list/mixins';
+@import './../../Common/Base_list/variables';
+@include dashboardNav;
+
+
+.profile__box{
+  margin: 100px 0;
+}
+.profile__form{
+  width: 400px;
+  margin: auto;
+}
+
+.profile__title{
+  @include fontMixin(#000, 22px){
+    font-weight: bold;
+  }
+  text-align: center;
+  margin-bottom: 40px;
+}
+.profile__row{
+  margin-bottom: 30px;
+}
+.profile__button_box{
+  text-align: center;
+}

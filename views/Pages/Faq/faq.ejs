@@ -16,9 +16,9 @@
         <div class="page-header">
           <h1>FAQ <small>Upload</small></h1>
         </div>
-        <form action="" id="faqUploadForm">
-          <input type="text" id="faqUploadTitle" class="form-control" placeholder="Text input">
-          <textarea class="form-control" rows="3" id="faqUploadContent"></textarea>
+        <form action="/faq/upload" id="faqUploadForm" method="POST">
+          <input type="text" id="faqUploadTitle" class="form-control" placeholder="Text input" name="title" autocomplete="off">
+          <textarea class="form-control" rows="3" id="faqUploadContent" name="content" autocomplete="off"></textarea>
           <button type="submit" class="btn btn-primary" id="faqUploadBtn">등록</button>
         </form>
       </div>

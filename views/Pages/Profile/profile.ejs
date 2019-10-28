@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include(`${process.cwd()}/views/Common/Base/head.ejs`, {path: 'Pages/Profile/profile',title:"HOME "}) %>
+</head>
+
+<body>
+  <%- include(`${process.cwd()}/views/Common/Component/Common/header.ejs`) %>
+  <main class="container-fluid padding-none">
+    <div class="row margin-none">
+      <div class="col-lg-2 padding-none">
+        <%- include(`${process.cwd()}/views/Common/Component/Modules/dashboard_nav.ejs`) %>
+      </div>
+      <div class="col-lg-10 padding-none">
+        <div class="profile__box">
+          <h1 class="profile__title">Profile</h1>
+          <form action="/users/profile" class="profile__form" method="POST">
+            <div class="profile__row">
+              <input type="text" class="form-control" name="email" placeholder="email" autocomplete="off" disabled value="<%= sess.user.email %>">
+            </div>
+            <div class="profile__row">
+              <input type="password" class="form-control" name="password" placeholder="password">
+            </div>
+            <div class="profile__row">
+              <input type="password" class="form-control" name="rePassword" placeholder="confirm password">
+            </div>
+            <div class="profile__button_box">
+              <button type="submit" class="btn btn-primary">수정</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <%- include(`${process.cwd()}/views/Common/Component/Common/footer.ejs`) %>
+  <%- include(`${process.cwd()}/views/Common/Base/foot.ejs`, {path: 'Pages/Profile/profile'}) %>
+</body>
+
+</html>

@@ -80,10 +80,10 @@ function listAxios(config, callback) {
     })
 }
 
-function Axios(config, callback) {
+function Axios(config) {
   const apiAddress = 'http://localhost:8081';
   config.url = apiAddress + config.url;
-  return axios(config).then(callback)
+  return axios(config)
 }
 
 

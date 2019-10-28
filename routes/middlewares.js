@@ -14,7 +14,7 @@ function isLogged(req,res,next){
  function isLoggedModal(req,res,next){
   console.log('TEST MiddleWare!');
   if(!req.session.user){
-    res.render('Common/Component/Modules/modal', {title: '로그인이 필요합니다.'})
+    res.render('Common/Component/Modules/modal', {title: '로그인이 필요합니다.',ahref:'/auth/login'})
   } else {
     next()
   }

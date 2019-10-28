@@ -9,3 +9,9 @@
 .faqUploadForm{
   margin-bottom: 200px;
 }
+
+.faq__list__title{
+  &:hover{
+    text-decoration: underline;
+  }
+}

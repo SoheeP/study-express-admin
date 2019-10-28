@@ -8,32 +8,65 @@
 <body>
   <%- include(`${process.cwd()}/views/Common/Component/Common/header.ejs`) %>
   <main class="container-fluid">
+
+
+
+
     <div class="row">
       <div class="col-lg-2 padding-none">
         <%- include(`${process.cwd()}/views/Common/Component/Modules/dashboard_nav.ejs`) %>
       </div>
       <div class="col-lg-10">
-        <div class="page-header">
-          <h1>FAQ<small>List</small></h1>
-          <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th class="strong"> # </th>
-                  <th class="strong"> Title </th>
-                  <th class="strong"> Admin </th>
-                </tr>
-              </thead>
-              <tbody>
-                <% faqList.map((list)=>{ %>
-                  <tr>
-                    <td><%= list.id %></td>
-                    <td><%= list.title %></td>
-                    <td><%= list.admin %></td>
-                  </tr>
-                <% }) %>
-              </tbody>
-            </table>
+
+        <div role="tabpanel">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist" id="myTab">
+            <li role="presentation" class="active"><a href="#list" aria-controls="list" role="tab"
+                data-toggle="tab">List</a></li>
+            <li role="presentation"><a href="#upload" aria-controls="upload" role="tab" data-toggle="tab">Upload</a>
+            </li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active " id="list">
+              <div class="page-header">
+                <h1>FAQ<small>List</small></h1>
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th class="strong"> # </th>
+                      <th class="strong"> Title </th>
+                      <th class="strong"> Admin </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% faqList.map((list,idx)=>{ %>
+                    <tr>
+                      <td><%= idx %></td>
+                      <td><a href="/faq/detail/view/<%= list.id %>" class="faq__list__title"><%= list.title %></a></td>
+                      <td><%= list.author %></td>
+                    </tr>
+                    <% }) %>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane " id="upload">
+              <form action="/faq/upload" method="post" id="faqUploadForm">
+                <input type="text" name="title" class="form-control" autocomplete="off" placeholder="제목"
+                  id="faqUploadTitle">
+                <textarea name="content" cols="30" rows="10" placeholder="내용...." class="form-control"
+                  id="faqUploadContent"></textarea>
+                <button type="submit" class="btn btn-primary">등록</button>
+              </form>
+            </div>
+          </div>
+
         </div>
+
+
+
+
 
       </div>
     </div>

@@ -40,7 +40,7 @@ router.route('/login')
       },
       method: 'POST'
     };
-    Axios(loginConfig, (response) => {
+    Axios(loginConfig).then( (response) => {
       let data = response.data;
       console.log(data);
       if (data.result === 1) {

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include(`${process.cwd()}/views/Common/Base/head.ejs`, {path: 'Pages/Faq/faq_detail',title:"HOME "}) %>
+</head>
+
+<body>
+  <%- include(`${process.cwd()}/views/Common/Component/Common/header.ejs`) %>
+  <main class="container-fluid padding-none ">
+    <div class="row padding-none margin-none">
+      <div class="col-lg-2 padding-none">
+        <%- include(`${process.cwd()}/views/Common/Component/Modules/dashboard_nav.ejs`) %>
+      </div>
+      <div class="col-lg-10 padding-none">
+        <div class="faq__box">
+          <% if(mode === 'modify'){ %>
+          <form action="/faq/update" method="post">
+            <input type="hidden" value="<%= faqDetail.id %>" name="faqSeq">
+            <input type="text" name="title" class="form-control" autocomplete="off" placeholder="제목" value="<%= faqDetail.title %>">
+            <textarea name="content" cols="30" rows="10" placeholder="내용...." class="form-control"> <%= faqDetail.content %> </textarea>
+            <div class="faq__detail__btn_box">
+              <a href="/faq/detail/view/<%= faqDetail.id %>" class="btn btn-danger">취소</a>
+              <button type="submit" class="btn btn-info">등록</button>
+            </div>
+          </form>
+          <% } else { %>
+          <div class="panel panel-default">
+            <div class="panel-heading faq__panel_header"><%= faqDetail.title %>
+              <small class="faq__detail_author"><%= faqDetail.author %></small>
+            </div>
+            <div class="panel-body">
+              <%= faqDetail.content %>
+            </div>
+          </div>
+          <div class="faq__detail__btn_box">
+            <a href="/faq/detail/modify/<%= faqDetail.id %>" class="btn btn-info">수정</a>
+            <a href="/faq/delete/<%= faqDetail.id %>" class="btn btn-danger">삭제</a>
+            <a href="/faq/list" class="btn btn-default">목록으로</a>
+          </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </main>
+  <%- include(`${process.cwd()}/views/Common/Component/Common/footer.ejs`) %>
+  <%- include(`${process.cwd()}/views/Common/Base/foot.ejs`, {path: 'Pages/Faq/faq_detail'}) %>
+</body>
+
+</html>

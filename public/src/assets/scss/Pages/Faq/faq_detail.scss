@@ -1,0 +1,22 @@
+@import './../../Common/Base_list/mixins';
+@import './../../Common/Base_list/variables';
+
+@include dashboardNav;
+.faq__box{
+  margin: 100px 70px;
+}
+.faq__panel_header{
+  position: relative;
+  font-size: 22px;
+  font-weight: bold;;
+}
+.faq__detail_author{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  right: 5px;
+  font-size: 14px;;
+}
+.faq__detail__btn_box{
+  text-align: right;
+}
